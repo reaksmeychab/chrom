@@ -1,0 +1,248 @@
+<html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        color: #333;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    #logo {
+        font-size: 20px;
+        color: #333;
+    }
+
+    #search-bar {
+        width: 60%;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        background-color: #f1f3f5;
+    }
+
+    #profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    #profile-info img {
+        width: 200px;
+        height: 200px;
+        background-color: #6c757d;
+        margin-bottom: 10px;
+    }
+
+    #timeline {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .timeline-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+        width: 55%;
+        padding: 20px;
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+    }
+
+    .timeline-item img {
+        width: 50px;
+        height: 50px;
+        background-color: #6c757d;
+        margin-right: 10px;
+    }
+
+    .timeline-item p {
+        margin: 0;
+        font-size: 14px;
+    }
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+      }
+    
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+    
+      #popup-toggle:checked + .overlay,
+      #popup-toggle:checked + .overlay + .popup {
+        display: block;
+      }
+    
+      .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+      }
+    
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 9999;
+      }
+    
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+    
+      #popup-toggle:checked + .overlay,
+      #popup-toggle:checked + .overlay + .popup {
+        display: block;
+      }
+    
+      .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+       
+      }
+    
+      .xmark{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        height: 50px;
+        width: 50px;
+        
+      }
+      .f{
+        position: sticky;
+        bottom:10px ;
+        right: 10px;
+      }
+     
+      
+    
+    
+    
+</style>
+
+<body>
+    <header>
+        <div id="logo">🌐 Downloads</div>
+        <input type="text" id="search-bar" placeholder="Search downloads">
+        <div id="logo">🌐</div>
+    </header>
+    <div id="profile-info">
+        <img src="profile.jpg" alt="Profile Picture">
+        <p>Your profile is managed by sababicode.com</p>
+    </div>
+    <div id="timeline">
+        <div class="timeline-item">
+            <img src="https://via.placeholder.com/350x150/FF5733/FFFFFF?Text=Download+1" alt="Download 1">
+            <p>Download 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="https://via.placeholder.com/350x150/C82333/FFFFFF?Text=Download+2" alt="Download 2">
+            <p>Download 2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="https://via.placeholder.com/350x150/28A745/FFFFFF?Text=Download+3" alt="Download 3">
+            <p>Download 3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="https://via.placeholder.com/350x150/FF5733/FFFFFF?Text=Download+1" alt="Download 1">
+            <p>Download 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="https://via.placeholder.com/350x150/C82333/FFFFFF?Text=Download+2" alt="Download 2">
+            <p>Download 2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="https://via.placeholder.com/350x150/28A745/FFFFFF?Text=Download+3" alt="Download 3">
+            <p>Download 3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="https://via.placeholder.com/350x150/FF5733/FFFFFF?Text=Download+1" alt="Download 1">
+            <p>Download 1 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="https://via.placeholder.com/350x150/C82333/FFFFFF?Text=Download+2" alt="Download 2">
+            <p>Download 2 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="timeline-item">
+            <img src="https://via.placeholder.com/350x150/28A745/FFFFFF?Text=Download+3" alt="Download 3">
+            <p>Download 3 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <input type="checkbox" id="popup-toggle" style="display: none" />
+
+    <div class="overlay"></div>
+
+    <div class="popup">
+      <label for="popup-toggle" class="close-btn">X</label>
+      <h2>Popup</h2>
+      <form action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+        <label for="link">link:</label>
+        <input type="text" id="link" name="link" required /><br /><br />
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" required /><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <div for="popup-toggle" class="btn  xmark"
+      ><i class="fa-solid fa-circle-plus f"></i
+    ></div>
+  </div>
+</section>
+</body>
+</html>
+
+</body>
+
+</html>
