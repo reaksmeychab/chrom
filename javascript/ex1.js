@@ -98,9 +98,18 @@
 
 /* 8 Write a function that could sort a list of numbers in ascending order.
  */
+   /* arrow function */
 // function sortNumber(number) {
 //     return number.sort((a, b) => a - b);
 //   }
+//   console.log(sortNumber([40, 20, 1000, 30, 2, 0]));
+ /* simple function */
+//   function sortNumber(number) {
+//     return number.sort(function(a, b) {
+//       return a - b;
+//     });
+//   }
+  
 //   console.log(sortNumber([40, 20, 1000, 30, 2, 0]));
 
 
@@ -131,12 +140,3 @@
 // const median = calculateMedian(numbersArray);
 // console.log('The median is:', median); // Output: The median is: 15
 
-
-function sum(a,b){
-    return a+b;
-}
-function display(b){display,
-    let res =b(2,3);
-    console.log("2+3="+res)
-}
-display(sum)

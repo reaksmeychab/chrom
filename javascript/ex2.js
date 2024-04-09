@@ -53,26 +53,38 @@
 
 /* 4 Use Node.js's fs module to write a file asynchronously `fs.writeFile`. Write a function that takes a file path and a callback. Use the callback to write the contents of the file to the file path.
  */
-const fs = require('fs');
+// const fs = require('fs');
 
-function writeFileAsync(filePath,data, callback) {
-  fs.writeFile(filePath, data,'utf8', err=> {
-    if (err) {
-      callback(err); // Pass the error to the callback
-    } else {
-      callback(null,data); // Pass the file contents to the callback
-    }
-  });
-}
+// function writeFileAsync(filePath,data, callback) {
+//   fs.writeFile(filePath, data,'utf8', err=> {
+//     if (err) {
+//       callback(err); // Pass the error to the callback
+//     } else {
+//       callback(null,data); // Pass the file contents to the callback
+//     }
+    
+//   });
+// }
 
-const filePath = 'd:/Homework/javascript/ex2.txt';
-const iwanttowrite="I'm from cambodia" 
+// const filePath = 'd:/Homework/javascript/ex2.txt';
+// const iwanttowrite="I'm from cambodia" 
 
-writeFileAsync(filePath, iwanttowrite,(err,data) => {
-  if (err) {
-    console.error('Error writing to the file:', err);
-  } else {
-    console.log('File write operation completes successfully.');
-    console.log(data);
-  }
+// writeFileAsync(filePath, iwanttowrite,(err,data) => {
+//   if (err) {
+//     console.error('Error writing to the file:', err);
+//   } else {
+//     console.log('File write operation completes successfully.');
+//     console.log(data);
+//   }
+// });
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+const squaredNumbers = numbers.map(function(num) {
+  return num * num;
 });
+
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+
+  
