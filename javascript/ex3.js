@@ -82,4 +82,4 @@ const groupedItems = items.reduce((acc, item) => {
   return acc;
 }, {});
 
-console.log(groupedItems);
+// console.log(groupedItems);
