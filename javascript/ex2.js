@@ -1,14 +1,14 @@
 /* 1 Write a function called that takes an array of numbers and a callback function that processes each element of the array. Use the callback to square each number in the array */
 
-function squareArray(num) {
-    return num * num;
-  }
-  function call(array, callback) {
-    for (let index = 0; index < array.length; index++) {
-      console.log(callback(array[index]));
-    }
-  }
-  call([1, 2, 3], squareArray);   
+// function squareArray(num) {
+//     return num * num;
+//   }
+//   function call(array, callback) {
+//     for (let index = 0; index < array.length; index++) {
+//       console.log(callback(array[index]));
+//     }
+//   }
+//   call([1, 2, 3], squareArray);   
   
 
 /* 2 Create a function that takes an array of numbers and a callback. The callback should return true if a number is even. Use the callback to filter the array synchronously.
@@ -61,5 +61,7 @@ function squareArray(num) {
 //     console.log(data);
 //   }
 // });
+
+/* still working with number5 */
 
 
