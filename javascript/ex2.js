@@ -27,28 +27,12 @@
 /* 3 Use Node.js's fs module to read a file asynchronously:`fs.readFile`. Write a function that takes a file path and a callback. Use the callback to print the contents of the file to the console.
   */
 
-// const fs = require('fs');
+const fs = require('fs');
 
-// function readFileAsync(filePath, callback) {
-//   fs.readFile(filePath, 'utf8', (err, data) => {
-//     if (err) {
-//       callback(err); // Pass the error to the callback
-//     } else {
-//       callback(null, data); // Pass the file contents to the callback
-//     }
-//   });
-// }
-
-// const filePath = 'd:/Homework/javascript/ex2.txt';
-
-// readFileAsync(filePath, (err, fileContents) => {
-//   if (err) {
-//     console.error('Error reading the file:', err);
-//   } else {
-//     console.log('File contents:');
-//     console.log(fileContents);
-//   }
-// });
+const filePath = 'd:/Homework/javascript/ex2.txt';
+ 
+//console.log('File contents:');
+console.log(fs.readFileSync(filePath, 'utf8'));
 
 
 /* 4 Use Node.js's fs module to write a file asynchronously `fs.writeFile`. Write a function that takes a file path and a callback. Use the callback to write the contents of the file to the file path.
@@ -79,12 +63,12 @@
 // });
 
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
-const squaredNumbers = numbers.map(function(num) {
-  return num * num;
-});
+// const squaredNumbers = numbers.map(function(num) {
+//   return num * num;
+// });
 
-console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+// console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
 
   
