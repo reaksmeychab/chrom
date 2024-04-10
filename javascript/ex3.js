@@ -62,3 +62,24 @@ write js plz */
 // const maxNumber = numbers.reduce((max, current) => (current > max ? current : max), numbers[0]);
 
 // console.log(maxNumber);
+
+
+/* You have an array of objects where each object has properties `name` and `category`. Use the `reduce` method to group these objects by category.
+Input: [ {name: “Bread”, category: “Grocery”}, {name: “Butter”, category: “Grocery”}, {name: “Shampoo”, category: “Personal Care”}]
+Output: { “Grocery”: [“Bread”, “Butter”], “Personal Care”: [“Shampoo”]}
+ */
+// const items = [
+//   { name: "Bread", category: "Grocery" },
+//   { name: "Butter", category: "Grocery" },
+//   { name: "Shampoo", category: "Personal Care" }
+// ];
+
+// const groupedItems = items.reduce((acc, item) => {
+//   if (!acc[item.category]) {
+//     acc[item.category] = [];
+//   }
+//   acc[item.category].push(item.name);
+//   return acc;
+// }, {});
+
+// console.log(groupedItems);
