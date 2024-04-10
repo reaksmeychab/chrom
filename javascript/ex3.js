@@ -68,18 +68,18 @@ write js plz */
 Input: [ {name: “Bread”, category: “Grocery”}, {name: “Butter”, category: “Grocery”}, {name: “Shampoo”, category: “Personal Care”}]
 Output: { “Grocery”: [“Bread”, “Butter”], “Personal Care”: [“Shampoo”]}
  */
-// const items = [
-//   { name: "Bread", category: "Grocery" },
-//   { name: "Butter", category: "Grocery" },
-//   { name: "Shampoo", category: "Personal Care" }
-// ];
+const items = [
+  { name: "Bread", category: "Grocery" },
+  { name: "Butter", category: "Grocery" },
+  { name: "Shampoo", category: "Personal Care" }
+];
 
-// const groupedItems = items.reduce((acc, item) => {
-//   if (!acc[item.category]) {
-//     acc[item.category] = [];
-//   }
-//   acc[item.category].push(item.name);
-//   return acc;
-// }, {});
+const groupedItems = items.reduce((acc, item) => {
+  if (!acc[item.category]) {
+    acc[item.category] = [];
+  }
+  acc[item.category].push(item.name);
+  return acc;
+}, {});
 
-// console.log(groupedItems);
+console.log(groupedItems);
