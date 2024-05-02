@@ -1,142 +1,174 @@
-                       /* Excercise 2.js */
-/* 
- 1 Write a declaration function that take a parameter called: “name”, and return a greeting message including that name
+/* 1 Iterate through the numbers 1 to 10, and at each iteration print “i” */
+
+//    for (let i = 1; i <= 10; i++) {
+//     console.log(i);
+// } 
+
+
+/* 2 Iterate through the numbers 10 to 1, and at each iteration print “i”
  */
 
-// function greet(name) {
-//     return `Hello, ${name}!`;
+//   for (let i = 10; i >= 1; i--){
+// console.log(i);
+// } 
+
+
+/* 3 Convert numerical grades into letter grades (A, B, C, D, E, F)
+ */
+function convernumerical(grade ){
+    if (grade >= 90) {
+        return 'A';
+    } else if (grade >= 80) {
+        return 'B';
+    } else if (grade >= 70) {
+        return 'C';
+    } else if (grade >= 60) {
+        return 'D';
+    } else if (grade >= 50) {
+        return 'E';
+    } else {
+        return 'F';
+    }
+}
+const numericalGrade = 85;
+const letterGrade = convernumerical(numericalGrade);
+console.log(`Numerical grade ${numericalGrade} corresponds to letter grade ${letterGrade}`);
+
+
+/* 4 A company has a list of employees and their salary in separate arrays. You are tasked with the job of printing our the name of each employee and the employee’s salary as a string in the format: “Employee name: Employee salary”
+Example: let employees = [“Lara”, “Evee”, “Simi”]
+                let salary = [1000, 2000, 120.90]
+ */
+
+// let employees = ["Lara", "Evee", "Simi"];
+// let salary = [1000, 2000, 120.90];
+                
+//                 // Check if both arrays have the same length
+// if (employees.length === salary.length) {
+//                     // Loop through each employee and their corresponding salary
+// for (let i = 0; i < employees.length; i++) {
+//      let employeeName = employees[i];
+//      let employeeSalary = salary[i];
+// console.log(`Employee name: ${employeeName} Employee salary: ${employeeSalary}`);
+// }
+//  } else {
+//     console.log("Error: Number of employees does not match number of salaries.");
+//     }
+
+ 
+// 5 Write a loop that displays from 1 to 10 except even numbers?
+
+//  for (let i = 1; i <= 10; i++) {
+//         if (i % 2 !== 0) {
+//         console.log(i);
+//     }
+// }
+
+
+
+// 6 Write a program that count the odd and even numbers from the list of numbers containing 1 to 10
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let oddCount = 0;
+// let evenCount = 0;
+
+// // Loop through the numbers array
+// for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] % 2 === 0) {
+//         // If the number is even, increment evenCount
+//         evenCount++;
+//     } else {
+//         // If the number is odd, increment oddCount
+//         oddCount++;
+//     }
+// }
+
+// console.log(`Count of odd numbers: ${oddCount}`);
+// console.log(`Count of even numbers: ${evenCount}`);
+
+
+/*7  Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five, print “FizzBuzz”
+ */
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         console.log('FizzBuzz');
+//     } else if (i % 3 === 0) {
+//         console.log('Fizz');
+//     } else if (i % 5 === 0) {
+//         console.log('Buzz');
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+
+/*8  Write a program that uses a loop to calculate the sum of all numbers in an array.
+ */
+// function calculateSum(numbers) {
+//     let sum = 0;
+
+//     for (let i = 0; i < numbers.length; i++) {
+//         sum += numbers[i];
+//     }
+
+//     return sum;
 // }
 
 // // Example usage:
-// const greeting = greet('John');
-// console.log(greeting); // Output: Hello, John!
+// const numbersArray = [5, 10, 15, 20];
+// const totalSum = calculateSum(numbersArray);
+// console.log('The sum of the numbers is:', totalSum);
 
 
 
-/* 2 Write an expression function that take two parameters “num1” & “num2” and returns their sum
- */
-
-// const sum = function(num1,num2){
-//      return num1+num2};
-// // Example usage:
-// const result = sum(5, 10);
-// console.log('The sum is:', result);
-
-/* 3 Write an arrow function that that take an array of numbers as a parameter and returns the average of those numbers */
-
-// const average = (number) => {
-//     let sum = 0;
-//     for (let index = 0; index < number.length; index++) {
-//       sum = sum + number[index];
+/*9  Write a program that prints all prime numbers between 1 and 100. */
+// function isPrime(number) {
+//     if (number <= 1) {
+//         return false;
 //     }
-//     return sum / number.length;
-//   };
-//   console.log(average([10, 20, 30, 40, 50]));
 
-
-/* 4 Write an anonymous function that calculates BMI (Body Mass Index). Formula: BMI = weight / (height * height)
- */
-
-
-// (function (weight, height) {
-//     console.log(Math.ceil(weight / (height * height)));
-//   })(70, 1.72);
-
-/*  5 Write a function that could take a parameter that is an array of objects representing products with `name`, `price` and `quantity` property and filter out products with a quantity of zero
-*/
-
-// function myProduct(product) {
-//     for (let index = 0; index < product.length; index++) {
-//       if (product[index].quantity > 0) {
-//         console.log(
-//           "Product name:",
-//           product[index].name,
-//           "product price:",
-//           product[index].price,
-//           "product quantity:",
-//           product[index].quantity
-//         );
-//       }
+//     for (let i = 2; i <= Math.sqrt(number); i++) {
+//         if (number % i === 0) {
+//             return false;
+//         }
 //     }
-//   }
-//   myProduct([
-//     { name: "Shirt", price: 10, quantity: 1 },
-//     { name: "pant", price: 20, quantity: 0 },
-//     { name: "hat", price: 30, quantity: 2 },
-//   ]);
 
-/* 6 Write a function that could check if the password provided is strong or not. A strong password should have a minimum length of 8 characters
- */
+//     return true;
+// }
 
-// function checkPassword(password) {
-//     if (password.length >= 8) {
-//       console.log("strong password");
-//     } else {
-//       console.log("your password is weak");
+// function printPrimesInRange(start, end) {
+//     for (let i = start; i <= end; i++) {
+//         if (isPrime(i)) {
+//             console.log(i);
+//         }
 //     }
-//   }
-//   checkPassword("1235678");
+// }
 
-/* 7 Write a function that count vowels of a string that provided as an input and return the count of vowels (a, e, i, o, u)
+// // Print prime numbers between 1 and 100
+// printPrimesInRange(1, 100);
+
+
+/* 10Write a program that finds the largest number in an array using a loop.
  */
-// function countVowel(string) {
-//     let count = 0;
-//     for (let index = 0; index < string.length; index++) {
-//       if (
-//         string[index] === "a" ||
-//         string[index] === "e" ||
-//         string[index] === "i" ||
-//         string[index] === "o" ||
-//         string[index] === "u"
-//       ) {
-//         count++;
-//       }
-//     }
-//     return count;
-//   }
-//   console.log(countVowel("hola hello"));
-
-/* 8 Write a function that could sort a list of numbers in ascending order.
- */
-   /* arrow function */
-// function sortNumber(number) {
-//     return number.sort((a, b) => a - b);
-//   }
-//   console.log(sortNumber([40, 20, 1000, 30, 2, 0]));
- /* simple function */
-//   function sortNumber(number) {
-//     return number.sort(function(a, b) {
-//       return a - b;
-//     });
-//   }
-  
-//   console.log(sortNumber([40, 20, 1000, 30, 2, 0]));
-
-
-/* 9 Write a function that takes an array of numbers as an input and returns the median value
- */
-// function calculateMedian(numbers) {
+// function findLargestNumber(numbers) {
 //     if (numbers.length === 0) {
 //         return null; // Return null for an empty array
 //     }
 
-//     // Sort the numbers array in ascending order
-//     numbers.sort((a, b) => a - b);
+//     let largest = numbers[0]; // Initialize largest with the first element of the array
 
-//     const middleIndex = Math.floor(numbers.length / 2);
-
-//     // Check if the array length is odd or even
-//     if (numbers.length % 2 === 0) {
-//         // If the array length is even, return the average of the middle two numbers
-//         return (numbers[middleIndex - 1] + numbers[middleIndex]) / 2;
-//     } else {
-//         // If the array length is odd, return the middle number
-//         return numbers[middleIndex];
+//     for (let i = 1; i < numbers.length; i++) {
+//         if (numbers[i] > largest) {
+//             largest = numbers[i]; // Update largest if a larger number is found
+//         }
 //     }
+
+//     return largest;
 // }
 
 // // Example usage:
-// const numbersArray = [1,10];
-// const median = calculateMedian(numbersArray);
-// console.log('The median is:', median); // Output: The median is: 15
+// const numbersArray = [10, 5, 30, 15, 20];
+// const largestNumber = findLargestNumber(numbersArray);
+// console.log('The largest number is:', largestNumber);
+
 

@@ -11,13 +11,13 @@
  
 /* 2Given the object of person {name: “Alice”, age: 25, job: “Developer”}, use object destructuring to extract the ‘name’ & ‘age’ properties and console.log it out
  */
-// const person = { name: "Alice", age: 25, job: "Developer" };
+const person = { name: "Alice", age: 25, job: "Developer" };
 
-// // Using object destructuring to extract 'name' and 'age' properties
-// const { name, age } = person;
+// Using object destructuring to extract 'name' and 'age' properties
+const { name, age } = person;
 
-// console.log(name); // Output: "Alice"
-// console.log(age); // Output: 25
+console.log(name); // Output: "Alice"
+console.log(age); // Output: 25
 
 /*  3 Given the object user { id: 1, name: “Sok”, address: {street: “123 Main St”, city: “PP”}}, use destructuring to extract the street and city
 // */
@@ -77,18 +77,18 @@ Example: object = {a:1, b:2, c:3, d:4}
                    filterProps(object, “b”, “d”) // Should Return:  {a:1, c:3}
  */
 
-                   function filterProps(obj, ...propsToFilter) {
-                    const filteredObj = {};
+                  //  function filterProps(obj, ...propsToFilter) {
+                  //   const filteredObj = {};
                     
-                    for (const key in obj) {
-                      if (!propsToFilter.includes(key)) {
-                        filteredObj[key] = obj[key];
-                      }
-                    }
+                  //   for (const key in obj) {
+                  //     if (!propsToFilter.includes(key)) {
+                  //       filteredObj[key] = obj[key];
+                  //     }
+                  //   }
                     
-                    return filteredObj;
-                  }
+                  //   return filteredObj;
+                  // }
                   
-                  const object = { a: 1, b: 2, c: 3, d: 4 };
-                  console.log(filterProps(object, "b", "d")); // Output: { a: 1, c: 3 }
-                  
+                  // const object = { a: 1, b: 2, c: 3, d: 4 };
+                  // console.log(filterProps(object, "b", "d")); // Output: { a: 1, c: 3 }
+                   
